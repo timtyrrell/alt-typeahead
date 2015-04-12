@@ -17,4 +17,6 @@ class TypeAheadResults extends React.Component {
   }
 }
 
+TypeAheadResults.propTypes = { posts: React.PropTypes.array };
+
 module.exports = TypeAheadResults;
