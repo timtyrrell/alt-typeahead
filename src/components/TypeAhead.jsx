@@ -6,8 +6,6 @@ import TypeAheadResults     from './TypeAheadResults.jsx';
 class TypeAhead extends React.Component {
   constructor() {
     super();
-    this.onChange = this.onChange.bind(this);
-    this.triggerSearch = this.triggerSearch.bind(this);
     this.state = this.getStoreState();
   }
 
@@ -26,11 +24,11 @@ class TypeAhead extends React.Component {
     TypeAheadStore.unlisten(this.onChange);
   }
 
-  onChange() {
+  onChange = () => {
     this.setState(this.getStoreState());
   }
 
-  triggerSearch(e) {
+  triggerSearch = (e) => {
     TypeAheadActions.fetchResults(e.target.value);
   }
 
