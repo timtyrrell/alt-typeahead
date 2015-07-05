@@ -1,7 +1,9 @@
-var React = require('react');
-var TypeAhead = require('./components/TypeAhead.jsx');
+import React     from 'react';
+import TypeAhead from './components/TypeAhead.jsx';
 
-React.render(
-  <TypeAhead />,
-  document.body
-);
+document.addEventListener('DOMContentLoaded', function () {
+  React.render(
+    <TypeAhead />,
+    document.body
+  );
+});

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Alt typeahead example",
   "scripts": {
-    "build": "browserify -t [reactify --es6] src/App.jsx > build/app.js"
+    "build": "browserify -t [babelify] src/App.jsx > build/app.js"
   },
   "repository": {
     "type": "git",
@@ -12,12 +12,12 @@
   "author": "Tim Tyrrell",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^9.0.8",
-    "reactify": "^1.1.0"
+    "babelify": "^6.1.2",
+    "browserify": "^9.0.8"
   },
   "dependencies": {
-    "alt": "^0.15.4",
+    "alt": "^0.17.0",
     "axios": "^0.5.4",
-    "react": "^0.13.1"
+    "react": "^0.13.3"
   }
 }

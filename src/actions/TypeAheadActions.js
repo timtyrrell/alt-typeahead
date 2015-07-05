@@ -1,5 +1,5 @@
-var alt = require('../alt');
-var TypeAheadFetcher = require('../utils/TypeAheadFetcher');
+import alt              from '../alt';
+import TypeAheadFetcher from '../utils/TypeAheadFetcher';
 
 class TypeAheadActions {
   constructor() {
@@ -17,4 +17,4 @@ class TypeAheadActions {
   }
 }
 
-module.exports = alt.createActions(TypeAheadActions);
+export default alt.createActions(TypeAheadActions);

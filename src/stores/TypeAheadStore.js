@@ -1,5 +1,5 @@
-var alt = require('../alt');
-var TypeAheadActions = require('../actions/TypeAheadActions');
+import alt              from '../alt';
+import TypeAheadActions from '../actions/TypeAheadActions';
 
 class TypeAheadStore {
   constructor() {
@@ -13,4 +13,4 @@ class TypeAheadStore {
   }
 }
 
-module.exports = alt.createStore(TypeAheadStore);
+export default alt.createStore(TypeAheadStore);

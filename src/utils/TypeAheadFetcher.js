@@ -1,6 +1,6 @@
-var axios = require('axios');
+import axios from 'axios';
 
-var TypeAheadFetcher = {
+const TypeAheadFetcher = {
   fetch: (searchTerm) => {
     const apiUrl = "https://public-api.wordpress.com/rest/v1/sites/en.blog.wordpress.com/posts/?number=10"
     return new Promise((resolve, reject) => {
@@ -19,4 +19,4 @@ var TypeAheadFetcher = {
   }
 }
 
-module.exports = TypeAheadFetcher;
+export default TypeAheadFetcher;

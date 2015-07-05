@@ -1,10 +1,11 @@
-var React = require('react');
-var TypeAheadStore = require('../stores/TypeAheadStore');
-var TypeAheadActions = require('../actions/TypeAheadActions');
-var TypeAheadResults = require('./TypeAheadResults.jsx');
+import React, { Component } from 'react';
+import TypeAheadStore       from '../stores/TypeAheadStore';
+import TypeAheadActions     from '../actions/TypeAheadActions';
+import TypeAheadResults     from './TypeAheadResults.jsx';
 
 class TypeAhead extends React.Component {
   constructor() {
+    super();
     this.onChange = this.onChange.bind(this);
     this.triggerSearch = this.triggerSearch.bind(this);
     this.state = this.getStoreState();
@@ -50,4 +51,4 @@ class TypeAhead extends React.Component {
   }
 }
 
-module.exports = TypeAhead;
+export default TypeAhead;
