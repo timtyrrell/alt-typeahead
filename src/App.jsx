@@ -1,9 +1,9 @@
-import React     from 'react';
-import TypeAhead from './components/TypeAhead.jsx';
+import React              from 'react';
+import TypeAheadContainer from './components/TypeAheadContainer.jsx';
 
 document.addEventListener('DOMContentLoaded', function () {
   React.render(
-    <TypeAhead />,
+    <TypeAheadContainer />,
     document.body
   );
 });
