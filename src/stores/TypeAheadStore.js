@@ -3,14 +3,18 @@ import TypeAheadActions from '../actions/TypeAheadActions';
 
 class TypeAheadStore {
   constructor() {
-    this.bindAction(TypeAheadActions.updateResults, this.handleUpdateTypeAhead);
+    this.bindListeners({
+      handleUpdateTypeAhead: TypeAheadActions.updateResults
+    });
 
-    this.results = [];
+    this.state = {
+      results: []
+    }
   }
 
   handleUpdateTypeAhead(results) {
-    this.results = results;
+    this.setState({results});
   }
 }
 
-export default alt.createStore(TypeAheadStore);
+export default alt.createStore(TypeAheadStore, 'TypeAheadStore');
