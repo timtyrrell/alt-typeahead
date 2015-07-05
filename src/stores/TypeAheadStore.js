@@ -1,17 +1,16 @@
-import alt              from '../alt';
-import TypeAheadActions from '../actions/TypeAheadActions';
+import alt                from '../alt';
+import { decorate, bind } from 'alt/utils/decorators'
+import TypeAheadActions   from '../actions/TypeAheadActions';
 
+@decorate(alt)
 class TypeAheadStore {
   constructor() {
-    this.bindListeners({
-      handleUpdateTypeAhead: TypeAheadActions.updateResults
-    });
-
     this.state = {
       results: []
     }
   }
 
+  @bind(TypeAheadActions.updateResults)
   handleUpdateTypeAhead(results) {
     this.setState({results});
   }
