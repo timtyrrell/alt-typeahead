@@ -8,11 +8,10 @@ class TypeAheadContainer extends Component {
   render() {
     return (
       <AltContainer
+        component={TypeAhead}
         store={TypeAheadStore}
         actions={TypeAheadActions}
-      >
-        <TypeAhead />
-      </AltContainer>
+      />
     );
   }
 }

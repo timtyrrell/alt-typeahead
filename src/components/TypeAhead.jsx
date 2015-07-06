@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import TypeAheadResults     from './TypeAheadResults.jsx';
 
 class TypeAhead extends React.Component {
+  static defaultProps = { results: [] };
+  static propTypes = {
+    results: React.PropTypes.array,
+    fetchResults: React.PropTypes.func.isRequired
+  };
+
   constructor() {
     super();
   }
 
   componentDidMount() {
-    this.refs.searchTermInput.getDOMNode().focus()
+    this.refs.searchTermInput.getDOMNode().focus();
   }
 
   triggerSearch = (e) => {
